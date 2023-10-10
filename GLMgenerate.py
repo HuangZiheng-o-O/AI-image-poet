@@ -8,7 +8,7 @@ from PIL import Image
 from tqdm import tqdm
 from WordSelectorKmeans import WordSelector
 from WordSelectorKmeans2 import WordSelector2
-from img2poem_solution import GenerateKeywordsFromImage
+from GenerateKeywordsFromImage import GenerateKeywordsFromImage
 def cosine_similarity(x, y):
     return torch.sum(x * y) / (torch.sqrt(torch.sum(pow(x, 2))) * torch.sqrt(torch.sum(pow(y, 2))))
 import sys
