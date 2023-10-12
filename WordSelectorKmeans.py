@@ -46,7 +46,7 @@ class WordSelector:
 
 if __name__ == "__main__":
 
-    # 示例
+    # 示例&测试
     selector = WordSelector()
     words = ['飞泉', '飞瀑', '瀑布', '锦屏', '翠屏', '玉台', '琼台', '瑶池', '长天', '中游', '钟山', '南游', '楚水', '玉关',
              '东皋']

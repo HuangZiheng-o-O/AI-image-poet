@@ -1,5 +1,5 @@
 
-#是为了调用img2poem_solution完成所有功能
+#是为了调用GenerateKeywordsFromImage.py完成所有功能
 import torch
 from transformers import ChineseCLIPProcessor, ChineseCLIPModel, AutoTokenizer, AutoConfig, AutoModel
 from transformers import BertTokenizer, T5ForConditionalGeneration
