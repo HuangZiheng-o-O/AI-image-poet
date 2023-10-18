@@ -28,6 +28,13 @@ class WordSelector:
         return word_embeddings
 
     def select_distinct_words(self, words, num_words=4):
+        # 先做处理，把"丹青 宿 画楼"这三个词去掉
+        if "丹青" in words:
+            words.remove("丹青")
+        if "宿" in words:
+            words.remove("宿")
+        if "画楼" in words:
+            words.remove("画楼")
         importance_scores = self.create_importance_scores(words)
         word_embeddings = self.get_word_embeddings(words)
         similarity_matrix = cosine_similarity(word_embeddings)

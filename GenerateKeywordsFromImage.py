@@ -95,11 +95,6 @@ class GenerateKeywordsFromImage:
         prompt = "关键词：" + " ".join(top_keywords) + " [EOS] "
 
         input_ids = self.lm_tokenizer.encode(prompt)
-        for _ in range(4):
-            inputs = {"input_ids": torch.tensor([input_ids])}
-            outputs = self.lm_model.generate(**inputs, max_length=100, num_beams=1,
-                                             no_repeat_ngram_size=1, early_stopping=False, do_sample=True)
-            input_ids = input_ids[:-1] + outputs.squeeze(0)[1:-1].tolist() + input_ids[-1:]
         return top_keywords, input_ids
 
     def get_topk_keywords_final(self,keys,num_words):
